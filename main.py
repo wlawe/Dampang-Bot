@@ -47,9 +47,60 @@ class MyClient(commands.Bot):
             await message.channel.send(f'Harith') 
 
         if message.content.startswith('$parah lu byan'):
-            await message.channel.send(f'Apalah si {message.author}')             
+            await message.channel.send(f'Apalah si {message.author}')  
 
+        \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+        if message.content.startswith('$wwz'):
+            await message.channel.send(f'@Everyone Ingfo Perzombian')  
             
+        if message.content.startswith('$mabar'):
+            await message.channel.send(f'Minimal Glory dek')
+    
+        if message.content.startswith('$andriana'):
+            await message.channel.send(f'Aduh gantengnya {message.author}')
+            
+        if message.content.startswith('$kapten cecep'):
+            await message.channel.send(f'Kamu ini ya {message.author} bukannya hati-hati,sekarang push up 20x')
+
+        if message.content.startswith('$jota'):
+            await message.channel.send(f'A-apasih panggil-panggil.. Bu-bukan berarti aku mau ladenin kamu ya.. Hmpph Baka >\\\<')
+
+        if message.content.startswith('$meowtler'):
+            await message.channel.send(f'DAS WAR EIN BEFEHL! DER ANGRIFF STEINERS WAR EIN BEFEHL!')
+
+        if message.content.startswith('$meowcina'):
+            await message.channel.send(f'将大局逆转吧!')
+
+        if message.content.startswith('$meowarab'):
+            await message.channel.send(f'Tob tobi tob tob tobi tob tob tobi tob tob tobaliy') 
+            
+        if message.content.startswith('$ariz'):
+            await message.channel.send(f'Ohh ariz jangan mabok') 
+            
+        if message.content.startswith('$vigo'):
+            await message.channel.send(f'Even when the night changes') 
+            
+        if message.content.startswith('$gifaren'):
+            await message.channel.send(f'Penghianat lu {message.author}') 
+            
+        if message.content.startswith('$abyan'):
+            await message.channel.send(f'{message.author} Ingat awal bukanlah akhir,akulah DAMPANG !!!') 
+
+        if message.content.startswith('$helmy'):
+            await message.channel.send(f'{message.author} Gagal coba lagi {message.author} GAGAL COBA LAGI @Everyone GAGAL.. COBA LAGIII') 
+
+        if message.content.startswith('$ferdi'):
+            await message.channel.send(f'{message.author} Tunggu menit 7 Aku Kembali') 
+            
+        if message.content.startswith('$boni'):
+            await message.channel.send(f'Tolong jauhkan {message.author} dari Lancelot dan Ling beliau') 
+
+        if message.content.startswith('$immanuel'):
+            await message.channel.send(f'Ingfokan @Everyone Laptop Terbaik untuk gaming') 
+       
+      \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
     async def on_reaction_add(self, reaction, user):
         if user != self.user:
             await reaction.message.channel.send('wkwkwkwk')
