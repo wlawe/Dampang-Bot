@@ -1,6 +1,8 @@
 import discord
 import requests
 import asyncio
+import random
+import os
 from discord.ext import commands, tasks
 from discord import app_commands
 import yt_dlp as youtube_dl
@@ -11,6 +13,18 @@ GUILD_ID = 1166227158805516400
 
 intents = discord.Intents.default()
 intents.message_content = True 
+
+Brainrot = [
+    "Berlele", "Ariz ajalah", "Abyan caboel", "Ariz mabok", "Boni Hyper", 
+    "Helmy miliarder", "Aryadikan", "Ketawa steak😂", "Lesley mcl", "Harith Binal",
+    "Entitas fikes", "Geprek bu de", "Indomie dobel", "Gus Vigo", "Dark sistem",
+    "Abyankan"
+]
+
+Brainrot_gambar = [
+    "Brainrot_gambar/gambar1.jpeg",
+    "Brainrot_gambar/gambar2.jpeg"
+]
 
 class MyClient(commands.Bot):
     def __init__(self):
@@ -172,7 +186,39 @@ async def say_hello(interaction: discord.Interaction):
 
 @client.tree.command(name="kucai", description="anak kucai")
 async def say_hello(interaction: discord.Interaction):
-    await interaction.response.send_message("TOHAPOK KAU ANAK KUCAI")   
+    await interaction.response.send_message("TOHAPOK KAU ANAK KUCAI")
+
+
+@client.tree.command(name="brainrot", description="Kata-kata")
+async def say_hello(interaction: discord.Interaction):
+    await interaction.response.send_message(random.choice(Brainrot))
+
+@client.tree.command(name="gambar_brainrot", description="gambar-gambar lucu")
+async def brainrot_image(interaction: discord.Interaction):
+    gambar_terpilih = random.choice(Brainrot_gambar)  
+
+    if os.path.exists(gambar_terpilih): 
+        file = discord.File(gambar_terpilih)  
+        await interaction.response.send_message(file=file)
+    else:
+        await interaction.response.send_message("❌ Gambar tidak ditemukan.")
+
+
+@client.tree.command(name="meme", description="meme random")
+async def meme(interaction: discord.Interaction):
+    try:
+        response = requests.get("https://meme-api.com/gimme")
+        data = response.json()
+
+        if "url" in data:
+            await interaction.response.send_message(data["url"])  
+        else:
+            await interaction.response.send_message("❌ Gagal mengambil meme.")
+
+    except Exception as e:
+        await interaction.response.send_message(f"❌ Terjadi kesalahan: {e}")        
+
+
 
 
 # Tanda kalau bot sudah aktif
