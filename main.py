@@ -47,7 +47,8 @@ class MyClient(commands.Bot):
             await message.channel.send(f'Harith') 
 
         if message.content.startswith('$parah lu byan'):
-            await message.channel.send(f'Apalah si {message.author}')             
+            await message.channel.send(f'Apalah si {message.author}')    
+            ///////////////////////////////////
 
             
     async def on_reaction_add(self, reaction, user):
