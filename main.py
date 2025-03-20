@@ -18,7 +18,7 @@ Brainrot = [
     "Berlele", "Ariz ajalah", "Abyan caboel", "Ariz mabok", "Boni Hyper", 
     "Helmy miliarder", "Aryadikan", "Ketawa steak😂", "Lesley mcl", "Harith Binal",
     "Entitas fikes", "Geprek bu de", "Indomie dobel", "Gus Vigo", "Dark sistem",
-    "Abyankan"
+    "Abyankan",
 ]
 
 Brainrot_gambar = [
